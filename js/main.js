@@ -5,15 +5,17 @@ if (window.sessionstorage) {
     var txtAnswer = document.getElementById('InputPassword1');
 
     txtUsername.value = sessionStorage.getItem('InputEmail1');
-    txtAnswer.value = sessonStorage.getItem('InputPassword1');
+    txtAnswer.value = sessionStorage.getItem('InputPassword1');
 
     txtUsername.addEventListener('input', function() {
-        localStorage.setItem('InputEmail1', txtUsername.value);
-        console.log('Email')
+        sessionStorage.setItem('InputEmail1', txtUsername.value);
+
     }, false);
+    console.log('Email')
 
     txtAnswer.addEventListener('input', function() {
-            localStorage.setItem('InputPassword1', txtAnswer.value); 
-            console.log('Password')
-            }, false);
-    }
+        sessionStorage.setItem('InputPassword1', txtAnswer.value);
+
+    }, false);
+    console.log('Password')
+}
